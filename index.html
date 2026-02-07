@@ -178,81 +178,7 @@
             color: rgba(142, 97, 57, 0.85);
         }
 
-        /* Modal overlay for eBook sign‑up */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 999;
-        }
-        .modal-overlay.active {
-            visibility: visible;
-            opacity: 1;
-        }
-        .modal {
-            background: linear-gradient(135deg, var(--card-glow-start) 0%, rgba(255,255,255,0.75) 50%, var(--card-glow-end) 100%);
-            backdrop-filter: blur(16px) saturate(200%);
-            -webkit-backdrop-filter: blur(16px) saturate(200%);
-            border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 24px 24px 20px;
-            width: 90%;
-            max-width: 420px;
-            box-shadow: 0 14px 28px var(--card-shadow), 0 10px 18px rgba(0,0,0,0.14);
-            color: var(--accent);
-            text-align: center;
-        }
-        .modal h4 {
-            font-family: 'Playfair Display', serif;
-            margin: 0 0 12px;
-            font-size: 1.3em;
-            color: var(--accent);
-        }
-        .modal p {
-            font-size: 0.9em;
-            margin-bottom: 12px;
-            color: rgba(142, 97, 57, 0.85);
-        }
-        .modal input {
-            width: 100%;
-            padding: 10px 12px;
-            margin-bottom: 12px;
-            border-radius: 10px;
-            border: 1px solid var(--card-border);
-            background: rgba(255, 255, 255, 0.6);
-            font-size: 0.85em;
-            color: var(--accent);
-        }
-        .modal button {
-            margin: 6px;
-            padding: 8px 18px;
-            border-radius: 20px;
-            border: none;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9em;
-            cursor: pointer;
-            transition: background 0.2s ease, color 0.2s ease;
-        }
-        .modal button.confirm {
-            background: var(--accent);
-            color: var(--primary);
-        }
-        .modal button.cancel {
-            background: var(--secondary);
-            color: var(--accent);
-        }
-        .modal button:hover {
-            filter: brightness(1.05);
-        }
+        /* Modal styling removed as eBook modal is no longer used */
 
         /* Reviews section styles */
         .reviews {
@@ -379,14 +305,7 @@
         </div>
         <!-- English content -->
         <div class="lang-en">
-            <!-- Free eBook Link (Digital Product) -->
-            <a class="card" href="#" id="ebook-link-en">
-                <img src="icon_book_crop.png" alt="eBook icon" />
-                <div>
-                    <p class="card-title">Free eBook</p>
-                    <p class="card-desc">Get my natural hair care guide for free</p>
-                </div>
-            </a>
+            <!-- Removed free eBook card (digital product) -->
             <!-- Shop Link -->
             <a class="card" href="https://beacons.ai/schicgirls" target="_blank" rel="noopener">
                 <img src="icon_shop_clear.png" alt="Shop icon" />
@@ -442,14 +361,7 @@
         </div>
         <!-- French content -->
         <div class="lang-fr">
-            <!-- Lien eBook gratuit (Produit numérique) -->
-            <a class="card" href="#" id="ebook-link-fr">
-                <img src="icon_book_crop.png" alt="Icône eBook" />
-                <div>
-                    <p class="card-title">Ebook gratuit</p>
-                    <p class="card-desc">Recevez mon guide de soins naturels gratuitement</p>
-                </div>
-            </a>
+            <!-- Carte eBook gratuite supprimée -->
             <!-- Boutique Link -->
             <a class="card" href="https://beacons.ai/schicgirls" target="_blank" rel="noopener">
                 <img src="icon_shop_clear.png" alt="Icône boutique" />
@@ -518,45 +430,7 @@
         <p class="lang-fr">© 2026 Schicgirl. Tous droits réservés. Design et contenu par Schicgirl.</p>
     </footer>
 
-    <!-- Modal overlay and form for free eBook sign‑up -->
-    <div class="modal-overlay" id="ebook-modal">
-        <div class="modal">
-            <!-- English modal content -->
-            <div class="lang-en">
-                <h4>Get Your Free eBook</h4>
-                <p>Please enter your email or phone number to receive the eBook.</p>
-            </div>
-            <!-- French modal content -->
-            <div class="lang-fr">
-                <h4>Recevez votre eBook gratuit</h4>
-                <p>Veuillez saisir votre adresse e‑mail ou votre numéro de téléphone pour recevoir l’eBook.</p>
-            </div>
-            <!-- Input field (shared by both languages) -->
-            <input type="text" id="contact-input" placeholder="Email or phone / E‑mail ou téléphone" />
-            <div id="error-message" style="display:none; color:#a94442; font-size:0.8em; margin-bottom:8px;">Please enter a phone number or email.</div>
-            <!-- Buttons for English -->
-            <div class="lang-en">
-                <button class="confirm">Confirm</button>
-                <button class="cancel">Cancel</button>
-            </div>
-            <!-- Buttons for French -->
-            <div class="lang-fr">
-                <button class="confirm">Confirmer</button>
-                <button class="cancel">Annuler</button>
-            </div>
-            <!-- Download link section (hidden by default) -->
-            <div id="ebook-download" style="display:none; margin-top:12px;">
-                <div class="lang-en">
-                    <p>Thank you! Click the link below to download your eBook.</p>
-                    <p><a href="ebook.pdf" download style="color: var(--accent); text-decoration: underline;">Download eBook</a></p>
-                </div>
-                <div class="lang-fr">
-                    <p>Merci ! Cliquez sur le lien ci‑dessous pour télécharger votre eBook.</p>
-                    <p><a href="ebook.pdf" download style="color: var(--accent); text-decoration: underline;">Télécharger l’eBook</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- Modal removed as free eBook is no longer offered -->
     <!-- Language toggle script -->
     <script>
     (function() {
@@ -571,46 +445,8 @@
             });
         });
 
-        // eBook modal logic
-        const ebookModal = document.getElementById('ebook-modal');
-        const ebookLinks = [document.getElementById('ebook-link-en'), document.getElementById('ebook-link-fr')];
-        const contactInput = document.getElementById('contact-input');
-        const errorMessage = document.getElementById('error-message');
-        const downloadSection = document.getElementById('ebook-download');
-        const confirmButtons = ebookModal ? ebookModal.querySelectorAll('.confirm') : [];
-        const cancelButtons = ebookModal ? ebookModal.querySelectorAll('.cancel') : [];
-
-        ebookLinks.forEach(link => {
-            if (link) {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    if (ebookModal) {
-                        contactInput.value = '';
-                        errorMessage.style.display = 'none';
-                        downloadSection.style.display = 'none';
-                        ebookModal.classList.add('active');
-                    }
-                });
-            }
-        });
-        confirmButtons.forEach(btn => {
-            btn.addEventListener('click', function() {
-                const value = contactInput.value.trim();
-                if (!value) {
-                    errorMessage.style.display = 'block';
-                } else {
-                    errorMessage.style.display = 'none';
-                    downloadSection.style.display = 'block';
-                }
-            });
-        });
-        cancelButtons.forEach(btn => {
-            btn.addEventListener('click', function() {
-                if (ebookModal) {
-                    ebookModal.classList.remove('active');
-                }
-            });
-        });
+        /* The free eBook modal and contact capture have been removed.
+           If needed in the future, this is where modal logic would be implemented. */
     })();
     </script>
 </body>
