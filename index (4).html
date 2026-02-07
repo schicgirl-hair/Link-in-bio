@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schicgirl – Links</title>
+    <!-- Import Google Fonts for an elegant feminine look -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Colour palette tuned for a glossier, premium look
+               Inspired by 2026 design trends that blend vibrant hues with soft neutrals, creating contrast while maintaining warmth【776959308733659†L186-L200】. */
+            --primary: #ffffff;     /* white page background for brightness */
+            /* A richer pastel gold for highlights and buttons */
+            --secondary: #fde5b5;   /* banana‑honey tone for a more luscious feel */
+            /* Deeper golden brown accent for strong contrast and luxury */
+            --accent: #b98a55;
+            /* Glass card variables: increase glow and depth for a shinier feel */
+            --card-glow-start: rgba(255, 255, 255, 0.9);
+            --card-glow-end: rgba(255, 255, 255, 0.6);
+            --card-border: rgba(255, 255, 255, 0.9);
+            /* Darker shadow to make cards pop off the page */
+            --card-shadow: rgba(0, 0, 0, 0.25);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: var(--primary);
+            color: var(--accent);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            width: 100%;
+            padding: 50px 0 90px;
+            text-align: center;
+            position: relative;
+            /* Soft gradient for the header – a warmer cream to complement the new palette */
+            background: linear-gradient(to bottom, #fffef6 0%, #fff2de 100%);
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.1em;
+            margin: 12px 0 6px;
+            color: var(--accent);
+        }
+
+        .header p {
+            font-size: 0.95em;
+            margin: 0;
+            color: var(--accent);
+            opacity: 0.8;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid var(--secondary);
+            background-color: #ffffff;
+            display: inline-block;
+            background-size: cover;
+            background-position: center;
+            /* Set the user-provided logo as background */
+            background-image: url('logo.jpg');
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: -70px auto 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Bio paragraph styling */
+        .bio {
+            max-width: 600px;
+            margin: 8px auto 0;
+            font-size: 0.85em;
+            line-height: 1.5;
+            color: rgba(142, 97, 57, 0.75);
+            text-align: center;
+        }
+
+        /* Language switcher */
+        .lang-switch {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .lang-switch button {
+            background: var(--secondary);
+            border: none;
+            color: var(--accent);
+            padding: 6px 14px;
+            margin: 0 6px;
+            border-radius: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: opacity 0.2s ease, background 0.2s ease;
+        }
+        .lang-switch button:hover {
+            opacity: 1;
+        }
+        .lang-switch button.active {
+            opacity: 1;
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        /* Natural women image gallery */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 20px auto;
+        }
+        .gallery img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 1px solid var(--card-border);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Cards */
+        .card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            /* Glassmorphic panel: use a multi‑stop gradient for enhanced shine,
+               background blur for a frosted effect, and a deeper shadow for depth. */
+            background: linear-gradient(135deg, var(--card-glow-start) 0%, rgba(255,255,255,0.75) 50%, var(--card-glow-end) 100%);
+            backdrop-filter: blur(14px) saturate(200%);
+            -webkit-backdrop-filter: blur(14px) saturate(200%);
+            border: 1px solid var(--card-border);
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: var(--accent);
+            /* Deeper shadow for greater contrast and floating effect */
+            box-shadow: 0 14px 28px var(--card-shadow), 0 10px 14px rgba(0,0,0,0.12);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            /* Stronger shadow when hovering to emphasise the card */
+            box-shadow: 0 18px 36px var(--card-shadow), 0 12px 20px rgba(0,0,0,0.14);
+        }
+
+        .card img {
+            width: 40px;
+            height: 40px;
+            margin-right: 16px;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1em;
+            margin: 0;
+            color: var(--accent);
+        }
+
+        .card-desc {
+            font-size: 0.85em;
+            margin-top: 4px;
+            color: rgba(142, 97, 57, 0.85);
+        }
+
+        /* Modal overlay for eBook sign‑up */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 999;
+        }
+        .modal-overlay.active {
+            visibility: visible;
+            opacity: 1;
+        }
+        .modal {
+            background: linear-gradient(135deg, var(--card-glow-start) 0%, rgba(255,255,255,0.75) 50%, var(--card-glow-end) 100%);
+            backdrop-filter: blur(16px) saturate(200%);
+            -webkit-backdrop-filter: blur(16px) saturate(200%);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 24px 24px 20px;
+            width: 90%;
+            max-width: 420px;
+            box-shadow: 0 14px 28px var(--card-shadow), 0 10px 18px rgba(0,0,0,0.14);
+            color: var(--accent);
+            text-align: center;
+        }
+        .modal h4 {
+            font-family: 'Playfair Display', serif;
+            margin: 0 0 12px;
+            font-size: 1.3em;
+            color: var(--accent);
+        }
+        .modal p {
+            font-size: 0.9em;
+            margin-bottom: 12px;
+            color: rgba(142, 97, 57, 0.85);
+        }
+        .modal input {
+            width: 100%;
+            padding: 10px 12px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            border: 1px solid var(--card-border);
+            background: rgba(255, 255, 255, 0.6);
+            font-size: 0.85em;
+            color: var(--accent);
+        }
+        .modal button {
+            margin: 6px;
+            padding: 8px 18px;
+            border-radius: 20px;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+            cursor: pointer;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+        .modal button.confirm {
+            background: var(--accent);
+            color: var(--primary);
+        }
+        .modal button.cancel {
+            background: var(--secondary);
+            color: var(--accent);
+        }
+        .modal button:hover {
+            filter: brightness(1.05);
+        }
+
+        /* Reviews section styles */
+        .reviews {
+            margin-top: 35px;
+        }
+        .reviews h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3em;
+            margin-bottom: 12px;
+            text-align: center;
+            color: var(--accent);
+        }
+        .review {
+            /* Use the same glassmorphic styling as cards but non-interactive */
+            background: linear-gradient(135deg, var(--card-glow-start) 0%, rgba(255,255,255,0.75) 50%, var(--card-glow-end) 100%);
+            backdrop-filter: blur(14px) saturate(200%);
+            -webkit-backdrop-filter: blur(14px) saturate(200%);
+            border: 1px solid var(--card-border);
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin-bottom: 16px;
+            box-shadow: 0 10px 20px var(--card-shadow), 0 6px 12px rgba(0,0,0,0.12);
+        }
+        .review p {
+            margin: 4px 0;
+        }
+        .review .stars {
+            color: var(--accent);
+            font-size: 0.9em;
+        }
+        .review .author {
+            font-style: italic;
+            font-size: 0.8em;
+            color: rgba(142, 97, 57, 0.75);
+        }
+
+        footer {
+            margin: 35px 0 20px;
+            font-size: 0.7em;
+            color: rgba(142, 97, 57, 0.7);
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        /* Language visibility toggles */
+        body[data-lang="fr"] .lang-en {
+            display: none;
+        }
+        body[data-lang="en"] .lang-fr {
+            display: none;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #1a140d;
+                color: #f7dba7;
+            }
+            .header {
+                background: linear-gradient(to bottom, #2a1f14, #3a2b18);
+            }
+            .profile-image {
+                border-color: #cba85f;
+            }
+            .card {
+                background: #2d2116;
+                border-color: #3d2e1d;
+                box-shadow: none;
+            }
+            .card:hover {
+                box-shadow: none;
+            }
+            .card-title {
+                color: #f7dba7;
+            }
+            .card-desc {
+                color: rgba(247, 219, 167, 0.85);
+            }
+            footer {
+                color: rgba(247, 219, 167, 0.7);
+            }
+            .lang-switch button.active {
+                color: #1a140d;
+            }
+        }
+    </style>
+</head>
+<body data-lang="en">
+    <header class="header">
+        <span class="profile-image" role="presentation"></span>
+        <h1>Schicgirl</h1>
+        <h3>natural Hair</h3>
+        <p class="lang-en">For women with curly, coily & textured hair.</p>
+        <p class="lang-fr">Pour les femmes aux cheveux bouclés, frisés et texturés.</p>
+        <!-- Bio paragraphs describing the mission in both languages -->
+      <!--  <p class="bio lang-en">Helping women with curly, frizzy and textured hair understand, care for, and grow their natural hair through simple routines,<br>knowledge and the right tools.</p>
+        <p class="bio lang-fr">Aider les femmes aux cheveux bouclés, frisés et texturés à comprendre, entretenir et faire pousser leurs cheveux naturels grâce à des routines simples,<br>des connaissances et les bons outils.</p>
+     -->
+    </header>
+    <main class="container">
+        <!-- Language switcher buttons -->
+        <div class="lang-switch">
+            <button type="button" data-lang="en" class="active">English</button>
+            <button type="button" data-lang="fr">Français</button>
+        </div>
+
+        <!-- Gallery of natural hair icons (shown in both languages) -->
+        <div class="gallery">
+            <img src="woman_icon_0.png" alt="Icon of woman with curly hair" />
+            <img src="woman_icon_1.png" alt="Icon of woman with braided hair" />
+            <img src="woman_icon_2.png" alt="Icon of woman with afro hair" />
+            <img src="woman_icon_3.png" alt="Icon of woman with long curls" />
+        </div>
+        <!-- English content -->
+        <div class="lang-en">
+            <!-- Free eBook Link (Digital Product) -->
+            <a class="card" href="#" id="ebook-link-en">
+                <img src="icon_book_crop.png" alt="eBook icon" />
+                <div>
+                    <p class="card-title">Free eBook</p>
+                    <p class="card-desc">Get my natural hair care guide for free</p>
+                </div>
+            </a>
+            <!-- Shop Link -->
+            <a class="card" href="https://beacons.ai/schicgirls" target="_blank" rel="noopener">
+                <img src="icon_shop_clear.png" alt="Shop icon" />
+                <div>
+                    <p class="card-title">Shop</p>
+                    <p class="card-desc">Discover all my newest items and exclusive products</p>
+                </div>
+            </a>
+            <!-- Amazon Picks Link -->
+            <a class="card" href="https://www.amazon.com/shop/schicgirl" target="_blank" rel="noopener">
+                <img src="icon_amazon_clear.png" alt="Amazon picks icon" />
+                <div>
+                    <p class="card-title">My Amazon Picks</p>
+                    <p class="card-desc">My recommendations and carefully curated affiliate links</p>
+                </div>
+            </a>
+            <!-- Facebook Link -->
+            <a class="card" href="https://www.facebook.com/schicgirl" target="_blank" rel="noopener">
+                <img src="icon_facebook_clear.png" alt="Facebook icon" />
+                <div>
+                    <p class="card-title">Facebook</p>
+                    <p class="card-desc">Follow me for updates and behind‑the‑scenes news</p>
+                </div>
+            </a>
+            <!-- Email Link -->
+            <a class="card" href="mailto:contacte.schicgirl@gmail.com" target="_self">
+                <img src="icon_email_clear.png" alt="Email icon" />
+                <div>
+                    <p class="card-title">Email</p>
+                    <p class="card-desc">Write to me for any questions or collaboration opportunities</p>
+                </div>
+            </a>
+
+            <!-- Reviews Section (English) -->
+            <div class="reviews">
+                <h3>Reviews</h3>
+                <div class="review">
+                    <p>"This routine transformed my curls! I finally have soft, hydrated hair."</p>
+                    <p class="stars">★★★★★</p>
+                    <p class="author">– Sophie C.</p>
+                </div>
+                <div class="review">
+                    <p>"I love the personalised advice. My hair has never looked better."</p>
+                    <p class="stars">★★★★★</p>
+                    <p class="author">– Miriam L.</p>
+                </div>
+                <div class="review">
+                    <p>"These tools are a game‑changer. My natural hair is thriving!"</p>
+                    <p class="stars">★★★★★</p>
+                    <p class="author">– Anita P.</p>
+                </div>
+            </div>
+        </div>
+        <!-- French content -->
+        <div class="lang-fr">
+            <!-- Lien eBook gratuit (Produit numérique) -->
+            <a class="card" href="#" id="ebook-link-fr">
+                <img src="icon_book_crop.png" alt="Icône eBook" />
+                <div>
+                    <p class="card-title">Ebook gratuit</p>
+                    <p class="card-desc">Recevez mon guide de soins naturels gratuitement</p>
+                </div>
+            </a>
+            <!-- Boutique Link -->
+            <a class="card" href="https://beacons.ai/schicgirls" target="_blank" rel="noopener">
+                <img src="icon_shop_clear.png" alt="Icône boutique" />
+                <div>
+                    <p class="card-title">Boutique</p>
+                    <p class="card-desc">Découvrez toutes mes nouveautés et produits exclusifs</p>
+                </div>
+            </a>
+            <!-- Amazon Picks Link (FR) -->
+            <a class="card" href="https://www.amazon.com/shop/schicgirl" target="_blank" rel="noopener">
+                <img src="icon_amazon_clear.png" alt="Icône Amazon" />
+                <div>
+                    <p class="card-title">Mes coups de cœur Amazon</p>
+                    <p class="card-desc">Mes recommandations et liens affiliés soigneusement sélectionnés</p>
+                </div>
+            </a>
+            <!-- Facebook Link (FR) -->
+            <a class="card" href="https://www.facebook.com/schicgirl" target="_blank" rel="noopener">
+                <img src="icon_facebook_clear.png" alt="Icône Facebook" />
+                <div>
+                    <p class="card-title">Facebook</p>
+                    <p class="card-desc">Suivez‑moi pour des mises à jour et des coulisses</p>
+                </div>
+            </a>
+            <!-- Email Link (FR) -->
+            <a class="card" href="mailto:contacte.schicgirl@gmail.com" target="_self">
+                <img src="icon_email_clear.png" alt="Icône email" />
+                <div>
+                    <p class="card-title">Contact</p>
+                    <p class="card-desc">Écrivez‑moi pour toute question ou collaboration</p>
+                </div>
+            </a>
+
+            <!-- Section Avis (French Reviews) -->
+            <div class="reviews">
+                <h3>Avis</h3>
+                <div class="review">
+                    <p>« Cette routine a transformé mes boucles ! Mes cheveux sont doux et hydratés. »</p>
+                    <p class="stars">★★★★★</p>
+                    <p class="author">– Sophie C.</p>
+                </div>
+                <div class="review">
+                    <p>« J’adore les conseils personnalisés. Mes cheveux n’ont jamais été aussi beaux. »</p>
+                    <p class="stars">★★★★★</p>
+                    <p class="author">– Miriam L.</p>
+                </div>
+                <div class="review">
+                    <p>« Les outils sont révolutionnaires. Mes cheveux naturels s’épanouissent ! »</p>
+                    <p class="stars">★★★★★</p>
+                    <p class="author">– Anita P.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+   <footer>
+        <p class="lang-en">As an Amazon Associate I earn from qualifying purchases.</p>
+        <p class="lang-fr">En tant qu’associée Amazon, je gagne des revenus grâce aux achats éligibles.</p>
+        <!-- Copyright and credit notice -->
+        <p class="lang-en">© 2026 Schicgirl. All rights reserved. Design and content by Schicgirl.</p>
+        <p class="lang-fr">© 2026 Schicgirl. Tous droits réservés. Design et contenu par Schicgirl.</p>
+    </footer>
+
+    <!-- Modal overlay and form for free eBook sign‑up -->
+    <div class="modal-overlay" id="ebook-modal">
+        <div class="modal">
+            <!-- English modal content -->
+            <div class="lang-en">
+                <h4>Get Your Free eBook</h4>
+                <p>Please enter your email or phone number to receive the eBook.</p>
+            </div>
+            <!-- French modal content -->
+            <div class="lang-fr">
+                <h4>Recevez votre eBook gratuit</h4>
+                <p>Veuillez saisir votre adresse e‑mail ou votre numéro de téléphone pour recevoir l’eBook.</p>
+            </div>
+            <!-- Input field (shared by both languages) -->
+            <input type="text" id="contact-input" placeholder="Email or phone / E‑mail ou téléphone" />
+            <div id="error-message" style="display:none; color:#a94442; font-size:0.8em; margin-bottom:8px;">Please enter a phone number or email.</div>
+            <!-- Buttons for English -->
+            <div class="lang-en">
+                <button class="confirm">Confirm</button>
+                <button class="cancel">Cancel</button>
+            </div>
+            <!-- Buttons for French -->
+            <div class="lang-fr">
+                <button class="confirm">Confirmer</button>
+                <button class="cancel">Annuler</button>
+            </div>
+            <!-- Download link section (hidden by default) -->
+            <div id="ebook-download" style="display:none; margin-top:12px;">
+                <div class="lang-en">
+                    <p>Thank you! Click the link below to download your eBook.</p>
+                    <p><a href="ebook.pdf" download style="color: var(--accent); text-decoration: underline;">Download eBook</a></p>
+                </div>
+                <div class="lang-fr">
+                    <p>Merci ! Cliquez sur le lien ci‑dessous pour télécharger votre eBook.</p>
+                    <p><a href="ebook.pdf" download style="color: var(--accent); text-decoration: underline;">Télécharger l’eBook</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Language toggle script -->
+    <script>
+    (function() {
+        const body = document.body;
+        const buttons = document.querySelectorAll('.lang-switch button');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.getAttribute('data-lang');
+                body.setAttribute('data-lang', lang);
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+
+        // eBook modal logic
+        const ebookModal = document.getElementById('ebook-modal');
+        const ebookLinks = [document.getElementById('ebook-link-en'), document.getElementById('ebook-link-fr')];
+        const contactInput = document.getElementById('contact-input');
+        const errorMessage = document.getElementById('error-message');
+        const downloadSection = document.getElementById('ebook-download');
+        const confirmButtons = ebookModal ? ebookModal.querySelectorAll('.confirm') : [];
+        const cancelButtons = ebookModal ? ebookModal.querySelectorAll('.cancel') : [];
+
+        ebookLinks.forEach(link => {
+            if (link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (ebookModal) {
+                        contactInput.value = '';
+                        errorMessage.style.display = 'none';
+                        downloadSection.style.display = 'none';
+                        ebookModal.classList.add('active');
+                    }
+                });
+            }
+        });
+        confirmButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const value = contactInput.value.trim();
+                if (!value) {
+                    errorMessage.style.display = 'block';
+                } else {
+                    errorMessage.style.display = 'none';
+                    downloadSection.style.display = 'block';
+                }
+            });
+        });
+        cancelButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (ebookModal) {
+                    ebookModal.classList.remove('active');
+                }
+            });
+        });
+    })();
+    </script>
+</body>
+</html>
