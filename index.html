@@ -1,508 +1,694 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schicgirl — Natural Hair</title>
 
-  <title>Schicgirl – Soins pour cheveux naturels</title>
-
-  <!-- ✅ Ownership / properties -->
+  <!-- Ownership / metadata -->
   <meta name="author" content="Schicgirl" />
   <meta name="creator" content="Schicgirl" />
   <meta name="publisher" content="Schicgirl" />
   <meta name="copyright" content="© 2026 Schicgirl. All rights reserved." />
-  <meta name="rights" content="© 2026 Schicgirl. All rights reserved." />
   <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#F5D7A6" />
 
-  <!-- ✅ Social preview (change the URLs to your real domain paths) -->
-  <meta property="og:site_name" content="Schicgirl" />
-  <meta property="og:title" content="Schicgirl — Natural Hair Tools & Care" />
-  <meta property="og:description" content="Stop guessing. Diagnose your hair dryness in 60 seconds + curated tools and routines." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://link.schicgirl.me/beautiful-woman.jpg" />
-  <meta property="og:url" content="https://link.schicgirl.me/" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Schicgirl — Natural Hair" />
-  <meta name="twitter:description" content="Stop guessing. Diagnose your hair dryness in 60 seconds." />
-  <meta name="twitter:image" content="https://link.schicgirl.me/beautiful-woman.jpg" />
-
-  <!-- ✅ Canonical + author link (optional but nice) -->
+  <!-- Social preview (update domain + image path) -->
   <link rel="canonical" href="https://link.schicgirl.me/" />
-  <link rel="author" href="https://www.facebook.com/schicgirl" />
+  <meta property="og:site_name" content="Schicgirl" />
+  <meta property="og:title" content="Schicgirl — Natural Hair Tools" />
+  <meta property="og:description" content="Stop guessing. Diagnose your dryness in 60 seconds + curated picks and tools." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://link.schicgirl.me/" />
+  <meta property="og:image" content="https://link.schicgirl.me/beautiful-woman.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- ✅ Favicons (FIXED) -->
-  <!-- Put these files in the SAME folder as your index.html (or update paths) -->
-  <link rel="icon" href="favicon.ico?v=2" sizes="any" />
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=2" />
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png?v=2" />
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=2" />
+  <!-- Favicons -->
+  <link rel="icon" href="favicon.ico?v=7" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=7" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png?v=7" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=7" />
 
-  <!-- Optional (helps some browsers) -->
-  <meta name="theme-color" content="#fde5b5" />
-
-  <!-- Import Google Fonts for an elegant feminine look -->
+  <!-- Premium fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <style>
-        :root {
-            /* Colour palette tuned for a glossier, premium look
-               Inspired by 2026 design trends that blend vibrant hues with soft neutrals, creating contrast while maintaining warmth【776959308733659†L186-L200】. */
-            --primary: #ffffff;     /* white page background for brightness */
-            /* A richer pastel gold for highlights and buttons */
-            --secondary: #fde5b5;   /* banana‑honey tone for a more luscious feel */
-            /* Deeper golden brown accent for strong contrast and luxury */
-            --accent: #b98a55;
-            /* Glass card variables: increase glow and depth for a shinier feel */
-            --card-glow-start: rgba(255, 255, 255, 0.9);
-            --card-glow-end: rgba(255, 255, 255, 0.6);
-            --card-border: rgba(255, 255, 255, 0.9);
-            /* Darker shadow to make cards pop off the page */
-            --card-shadow: rgba(0, 0, 0, 0.25);
-        }
+  <style>
+    :root{
+      --bg: #fffaf3;
+      --ink: #4c2f18;
+      --muted: rgba(76,47,24,.78);
+      --muted2: rgba(76,47,24,.62);
 
-        body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background: var(--primary);
-            color: var(--accent);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+      --gold: #F5D7A6;
+      --gold2:#E8C07E;
+      --caramel:#B9844A;
 
-        .header {
-            width: 100%;
-            padding: 50px 0 90px;
-            text-align: center;
-            position: relative;
-            /* Soft gradient for the header – a warmer cream to complement the new palette */
-            background: linear-gradient(to bottom, #fffef6 0%, #fff2de 100%);
-        }
+      --glass: rgba(255,255,255,.62);
+      --glass2: rgba(255,255,255,.38);
+      --stroke: rgba(255,255,255,.78);
 
-        .header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.1em;
-            margin: 12px 0 6px;
-            color: var(--accent);
-        }
+      --shadow: 0 22px 60px rgba(19, 12, 7, .18);
+      --shadow2: 0 14px 30px rgba(19,12,7,.14);
 
-        .header p {
-            font-size: 0.95em;
-            margin: 0;
-            color: var(--accent);
-            opacity: 0.8;
-        }
+      --radius: 20px;
+    }
 
-        .profile-image {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 4px solid var(--secondary);
-            background-color: #ffffff;
-            display: inline-block;
-            background-size: cover;
-            background-position: center;
-            /* Set the user-provided logo as background */
-            background-image: url('logo.jpg');
-        }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(900px 520px at 15% 0%, rgba(245,215,166,.55), transparent 60%),
+        radial-gradient(900px 520px at 90% 10%, rgba(232,192,126,.48), transparent 62%),
+        linear-gradient(180deg, #fffdf9 0%, var(--bg) 55%, #fffdf9 100%);
+      display:flex;
+      justify-content:center;
+      padding: 22px 14px 60px;
+      overflow-x:hidden;
+    }
 
-        .container {
-            width: 90%;
-            max-width: 600px;
-            margin: -70px auto 40px;
-            position: relative;
-            z-index: 2;
-        }
+    /* Subtle premium grain */
+    body:before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      opacity:.10;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+      mix-blend-mode:multiply;
+    }
 
-        /* Bio paragraph styling */
-        .bio {
-            max-width: 600px;
-            margin: 8px auto 0;
-            font-size: 0.85em;
-            line-height: 1.5;
-            color: rgba(142, 97, 57, 0.75);
-            text-align: center;
-        }
+    /* ✨ Moving luxury glow lights */
+    body:after{
+      content:"";
+      position:fixed;
+      inset:-120px;
+      pointer-events:none;
+      background:
+        radial-gradient(320px 220px at 12% 18%, rgba(245,215,166,.35), transparent 62%),
+        radial-gradient(340px 240px at 78% 22%, rgba(232,192,126,.28), transparent 64%),
+        radial-gradient(420px 300px at 50% 72%, rgba(185,132,74,.15), transparent 62%);
+      filter: blur(6px);
+      animation: glowMove 10s ease-in-out infinite alternate;
+      opacity: .85;
+    }
 
-        /* Language switcher */
-        .lang-switch {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .lang-switch button {
-            background: var(--secondary);
-            border: none;
-            color: var(--accent);
-            padding: 6px 14px;
-            margin: 0 6px;
-            border-radius: 20px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9em;
-            cursor: pointer;
-            opacity: 0.8;
-            transition: opacity 0.2s ease, background 0.2s ease;
-        }
-        .lang-switch button:hover {
-            opacity: 1;
-        }
-        .lang-switch button.active {
-            opacity: 1;
-            background: var(--accent);
-            color: var(--primary);
-        }
+    @keyframes glowMove{
+      0%   { transform: translate3d(0,0,0) scale(1); }
+      50%  { transform: translate3d(-10px, 8px, 0) scale(1.02); }
+      100% { transform: translate3d(12px, -10px, 0) scale(1.03); }
+    }
 
-        /* Natural women image gallery */
-        .gallery {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin: 20px auto;
-        }
-        .gallery img {
-            width: 60px;
-            height: 60px;
-            object-fit: cover;
-            border-radius: 12px;
-            border: 1px solid var(--card-border);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
+    .wrap{
+      width:100%;
+      max-width: 700px;
+      position:relative;
+      z-index:1;
+    }
 
-        /* Cards */
-        .card {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            /* Glassmorphic panel: use a multi‑stop gradient for enhanced shine,
-               background blur for a frosted effect, and a deeper shadow for depth. */
-            background: linear-gradient(135deg, var(--card-glow-start) 0%, rgba(255,255,255,0.75) 50%, var(--card-glow-end) 100%);
-            backdrop-filter: blur(14px) saturate(200%);
-            -webkit-backdrop-filter: blur(14px) saturate(200%);
-            border: 1px solid var(--card-border);
-            border-radius: 14px;
-            padding: 16px 22px;
-            margin-bottom: 20px;
-            text-decoration: none;
-            color: var(--accent);
-            /* Deeper shadow for greater contrast and floating effect */
-            box-shadow: 0 14px 28px var(--card-shadow), 0 10px 14px rgba(0,0,0,0.12);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            overflow: hidden;
-        }
+    header{
+      text-align:center;
+      padding: 26px 18px 18px;
+    }
 
-        .card:hover {
-            transform: translateY(-4px);
-            /* Stronger shadow when hovering to emphasise the card */
-            box-shadow: 0 18px 36px var(--card-shadow), 0 12px 20px rgba(0,0,0,0.14);
-        }
+    /* Premium logo ring + shimmer */
+    .logo{
+      width: 126px;
+      height: 126px;
+      border-radius: 999px;
+      margin: 6px auto 14px;
+      background: #fff;
+      border: 1px solid rgba(255,255,255,.92);
+      box-shadow:
+        0 24px 46px rgba(0,0,0,.16),
+        0 0 35px rgba(245,215,166,.35);
+      overflow:hidden;
+      position:relative;
+      transform: translateZ(0);
+      animation: floatLogo 3.2s ease-in-out infinite;
+    }
 
-        .card img {
-            width: 40px;
-            height: 40px;
-            margin-right: 16px;
-        }
+    @keyframes floatLogo{
+      0%,100%{ transform: translateY(0); }
+      50%{ transform: translateY(-4px); }
+    }
 
-        .card-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1em;
-            margin: 0;
-            color: var(--accent);
-        }
+    .logo:before{
+      content:"";
+      position:absolute;
+      inset:-60%;
+      background: radial-gradient(circle at 30% 20%, rgba(255,255,255,.95), transparent 45%);
+      transform: rotate(18deg);
+      opacity:.75;
+      pointer-events:none;
+    }
 
-        .card-desc {
-            font-size: 0.85em;
-            margin-top: 4px;
-            color: rgba(142, 97, 57, 0.85);
-        }
+    /* Gold ring */
+    .logo:after{
+      content:"";
+      position:absolute;
+      inset: -2px;
+      border-radius: 999px;
+      border: 2px solid rgba(245,215,166,.75);
+      box-shadow: inset 0 0 0 1px rgba(185,132,74,.18);
+      pointer-events:none;
+    }
 
-        /* Modal styling removed as eBook modal is no longer used */
+    .logo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
 
-        /* Reviews section styles */
-        .reviews {
-            margin-top: 35px;
-        }
-        .reviews h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3em;
-            margin-bottom: 12px;
-            text-align: center;
-            color: var(--accent);
-        }
-        .review {
-            /* Use the same glassmorphic styling as cards but non-interactive */
-            background: linear-gradient(135deg, var(--card-glow-start) 0%, rgba(255,255,255,0.75) 50%, var(--card-glow-end) 100%);
-            backdrop-filter: blur(14px) saturate(200%);
-            -webkit-backdrop-filter: blur(14px) saturate(200%);
-            border: 1px solid var(--card-border);
-            border-radius: 14px;
-            padding: 16px 22px;
-            margin-bottom: 16px;
-            box-shadow: 0 10px 20px var(--card-shadow), 0 6px 12px rgba(0,0,0,0.12);
-        }
-        .review p {
-            margin: 4px 0;
-        }
-        .review .stars {
-            color: var(--accent);
-            font-size: 0.9em;
-        }
-        .review .author {
-            font-style: italic;
-            font-size: 0.8em;
-            color: rgba(142, 97, 57, 0.75);
-        }
+    .brand{
+      font-family:"Playfair Display", serif;
+      font-weight:700;
+      font-size: 2.15rem;
+      letter-spacing:.3px;
+      margin:0;
+      line-height:1.05;
+      position:relative;
+      display:inline-block;
+    }
 
-        /* Bottom banner image styling */
-        .bottom-banner {
-            margin: 40px auto;
-            text-align: center;
-        }
-        .bottom-banner img {
-            width: 80%;
-            max-width: 600px;
-            border-radius: 16px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
+    /* tiny underline glow */
+    .brand:after{
+      content:"";
+      display:block;
+      width: 62%;
+      height: 3px;
+      margin: 10px auto 0;
+      border-radius: 99px;
+      background: linear-gradient(90deg, transparent, rgba(245,215,166,.95), transparent);
+      filter: blur(.1px);
+      opacity:.9;
+    }
 
-        footer {
-            margin: 35px 0 20px;
-            font-size: 0.7em;
-            color: rgba(142, 97, 57, 0.7);
-            text-align: center;
-            line-height: 1.4;
-        }
+    .tag{
+      margin: 8px 0 0;
+      font-size: .98rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
 
-        /* Language visibility toggles */
-        body[data-lang="fr"] .lang-en {
-            display: none;
-        }
-        body[data-lang="en"] .lang-fr {
-            display: none;
-        }
+    .sub{
+      margin: 10px auto 0;
+      max-width: 540px;
+      font-size: .92rem;
+      color: var(--muted2);
+      line-height:1.55;
+    }
 
-        @media (prefers-color-scheme: dark) {
-            body {
-                background: #1a140d;
-                color: #f7dba7;
-            }
-            .header {
-                background: linear-gradient(to bottom, #2a1f14, #3a2b18);
-            }
-            .profile-image {
-                border-color: #cba85f;
-            }
-            .card {
-                background: #2d2116;
-                border-color: #3d2e1d;
-                box-shadow: none;
-            }
-            .card:hover {
-                box-shadow: none;
-            }
-            .card-title {
-                color: #f7dba7;
-            }
-            .card-desc {
-                color: rgba(247, 219, 167, 0.85);
-            }
-            footer {
-                color: rgba(247, 219, 167, 0.7);
-            }
-            .lang-switch button.active {
-                color: #1a140d;
-            }
-        }
-    </style>
+    /* Language switch */
+    .switch{
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      margin: 18px 0 0;
+    }
+    .switch button{
+      border: 1px solid rgba(185,132,74,.22);
+      background: rgba(255,255,255,.55);
+      backdrop-filter: blur(12px) saturate(170%);
+      -webkit-backdrop-filter: blur(12px) saturate(170%);
+      border-radius: 999px;
+      padding: 9px 14px;
+      font-size: .92rem;
+      cursor:pointer;
+      color: var(--ink);
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+      box-shadow: 0 10px 18px rgba(19,12,7,.08);
+    }
+    .switch button:hover{ transform: translateY(-1px); }
+    .switch button.active{
+      background: linear-gradient(135deg, rgba(185,132,74,.95), rgba(245,215,166,.95));
+      color: #2a1608;
+      border-color: rgba(255,255,255,.55);
+      box-shadow: 0 16px 26px rgba(19,12,7,.12);
+      font-weight:700;
+    }
+
+    /* Gallery */
+    .gallery{
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin: 18px auto 10px;
+    }
+    .gallery img{
+      width: 58px;
+      height: 58px;
+      border-radius: 16px;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,.82);
+      box-shadow: 0 14px 24px rgba(19,12,7,.12);
+      background:#fff;
+      transform: translateZ(0);
+      transition: transform .2s ease;
+    }
+    .gallery img:hover{ transform: translateY(-2px); }
+
+    main{
+      margin-top: 8px;
+      padding: 0 10px;
+    }
+
+    /* Hero note under first card */
+    .hero-note{
+      text-align:center;
+      font-size:.86rem;
+      color: var(--muted2);
+      margin: 10px 0 18px;
+    }
+    .hero-note strong{ color: var(--ink); }
+
+    .section-title{
+      margin: 24px 0 10px;
+      text-align:center;
+      font-family:"Playfair Display", serif;
+      font-size: 1.25rem;
+      color: var(--ink);
+    }
+
+    /* Cards */
+    .card{
+      display:flex;
+      gap: 14px;
+      align-items:center;
+      padding: 16px 18px;
+      border-radius: var(--radius);
+      text-decoration:none;
+      color: var(--ink);
+
+      background: linear-gradient(135deg, var(--glass) 0%, rgba(255,255,255,.46) 45%, var(--glass2) 100%);
+      border: 1px solid rgba(255,255,255,.74);
+      backdrop-filter: blur(18px) saturate(200%);
+      -webkit-backdrop-filter: blur(18px) saturate(200%);
+      box-shadow: var(--shadow2);
+
+      position:relative;
+      overflow:hidden;
+      transition: transform .18s ease, box-shadow .18s ease;
+      margin-bottom: 14px;
+
+      animation: floatUp .55s ease both;
+    }
+
+    @keyframes floatUp{
+      from{ opacity:0; transform: translateY(12px); }
+      to{ opacity:1; transform: translateY(0); }
+    }
+
+    .card:before{
+      content:"";
+      position:absolute;
+      inset:-40%;
+      background: radial-gradient(circle at 18% 18%, rgba(255,255,255,.85), transparent 42%);
+      transform: rotate(12deg);
+      opacity: .56;
+      pointer-events:none;
+    }
+
+    /* premium shimmer sweep */
+    .card:after{
+      content:"";
+      position:absolute;
+      inset:-30%;
+      background: linear-gradient(120deg,
+        transparent 20%,
+        rgba(255,255,255,.55) 35%,
+        transparent 50%);
+      transform: translateX(-40%) rotate(8deg);
+      opacity:.0;
+      pointer-events:none;
+      transition: opacity .2s ease;
+    }
+
+    .card:hover{
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+    .card:hover:after{
+      opacity:.55;
+      animation: shimmer 1.2s ease-in-out;
+    }
+
+    @keyframes shimmer{
+      0%{ transform: translateX(-50%) rotate(8deg); }
+      100%{ transform: translateX(40%) rotate(8deg); }
+    }
+
+    /* Icon holder removes white backgrounds */
+    .icon{
+      width: 48px;
+      height: 48px;
+      border-radius: 15px;
+      display:grid;
+      place-items:center;
+      flex: 0 0 48px;
+
+      background: linear-gradient(135deg, rgba(245,215,166,.90), rgba(255,255,255,.62));
+      border: 1px solid rgba(255,255,255,.72);
+      box-shadow: 0 10px 18px rgba(19,12,7,.10);
+    }
+    .icon img{
+      width: 26px;
+      height: 26px;
+      object-fit: contain;
+      display:block;
+      filter: drop-shadow(0 10px 14px rgba(19,12,7,.12));
+    }
+
+    .card h4{
+      margin:0;
+      font-family:"Playfair Display", serif;
+      font-size: 1.07rem;
+      letter-spacing:.2px;
+    }
+    .card p{
+      margin: 4px 0 0;
+      font-size: .90rem;
+      color: var(--muted2);
+      line-height:1.35;
+    }
+
+    /* Make the first card a hero (stronger) */
+    .card.hero{
+      border: 1px solid rgba(245,215,166,.75);
+      box-shadow: 0 18px 40px rgba(19,12,7,.14), 0 0 32px rgba(245,215,166,.18);
+    }
+    .badge{
+      position:absolute;
+      top: 12px;
+      right: 12px;
+      font-size: .72rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(185,132,74,.95), rgba(245,215,166,.92));
+      color: #2a1608;
+      border: 1px solid rgba(255,255,255,.55);
+      box-shadow: 0 10px 18px rgba(19,12,7,.10);
+      font-weight: 800;
+      letter-spacing: .3px;
+    }
+
+    /* Reviews */
+    .reviews{
+      margin-top: 18px;
+    }
+    .review{
+      background: linear-gradient(135deg, var(--glass) 0%, rgba(255,255,255,.46) 50%, var(--glass2) 100%);
+      border: 1px solid rgba(255,255,255,.74);
+      backdrop-filter: blur(18px) saturate(200%);
+      -webkit-backdrop-filter: blur(18px) saturate(200%);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      box-shadow: 0 10px 20px rgba(19,12,7,.10);
+      margin-bottom: 12px;
+      position:relative;
+      overflow:hidden;
+    }
+    .review:before{
+      content:"";
+      position:absolute;
+      inset:-50%;
+      background: radial-gradient(circle at 20% 12%, rgba(255,255,255,.75), transparent 46%);
+      transform: rotate(16deg);
+      opacity:.45;
+      pointer-events:none;
+    }
+    .review .stars{ font-size:.92rem; letter-spacing:1px; }
+    .review .who{ margin-top: 8px; font-size:.85rem; color: var(--muted2); font-style: italic; }
+
+    /* Banner */
+    .banner{
+      margin: 24px 10px 0;
+      border-radius: 24px;
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,.84);
+      box-shadow: var(--shadow2);
+      background:#fff;
+      position:relative;
+    }
+    .banner:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: radial-gradient(circle at 20% 10%, rgba(255,255,255,.30), transparent 45%);
+      pointer-events:none;
+    }
+    .banner img{
+      width:100%;
+      display:block;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    footer{
+      margin-top: 18px;
+      text-align:center;
+      color: rgba(76,47,24,.62);
+      font-size: .78rem;
+      line-height:1.5;
+      padding: 14px 10px 0;
+    }
+
+    /* Language toggles */
+    body[data-lang="fr"] .lang-en{ display:none; }
+    body[data-lang="en"] .lang-fr{ display:none; }
+
+    /* Dark mode */
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg: #120C08;
+        --ink: #F7E2C3;
+        --muted: rgba(247,226,195,.84);
+        --muted2: rgba(247,226,195,.68);
+        --glass: rgba(28,18,12,.70);
+        --glass2: rgba(28,18,12,.46);
+        --shadow: 0 22px 70px rgba(0,0,0,.55);
+        --shadow2: 0 14px 34px rgba(0,0,0,.45);
+      }
+      body{
+        background:
+          radial-gradient(900px 520px at 15% 0%, rgba(185,132,74,.24), transparent 60%),
+          radial-gradient(900px 520px at 90% 10%, rgba(245,215,166,.16), transparent 62%),
+          linear-gradient(180deg, #0e0906 0%, var(--bg) 55%, #0e0906 100%);
+      }
+      .switch button{ border-color: rgba(245,215,166,.18); }
+      .switch button.active{ color:#1b0f08; }
+      footer{ color: rgba(247,226,195,.62); }
+      .hero-note{ color: rgba(247,226,195,.68); }
+      .hero-note strong{ color: rgba(247,226,195,.92); }
+    }
+
+    /* reduce motion accessibility */
+    @media (prefers-reduced-motion: reduce){
+      body:after, .logo, .card, .card:hover:after { animation:none !important; }
+      .card, .gallery img, .switch button { transition:none !important; }
+    }
+  </style>
 </head>
+
 <body data-lang="en">
-    <header class="header">
-        <span class="profile-image" role="presentation"></span>
-        <h1>Schicgirl</h1>
-        <h3>natural Hair</h3>
-        <p class="lang-en">For women with curly, coily & textured hair.</p>
-        <p class="lang-fr">Pour les femmes aux cheveux bouclés, frisés et texturés.</p>
-        <!-- Bio paragraphs describing the mission in both languages -->
-      <!--  <p class="bio lang-en">Helping women with curly, frizzy and textured hair understand, care for, and grow their natural hair through simple routines,<br>knowledge and the right tools.</p>
-        <p class="bio lang-fr">Aider les femmes aux cheveux bouclés, frisés et texturés à comprendre, entretenir et faire pousser leurs cheveux naturels grâce à des routines simples,<br>des connaissances et les bons outils.</p>
-     -->
+  <div class="wrap">
+    <header>
+      <div class="logo" aria-label="Schicgirl logo">
+        <img src="logo.jpg" alt="Schicgirl logo" />
+      </div>
+
+      <h1 class="brand">Schicgirl</h1>
+
+      <p class="tag lang-en">Natural hair — clarity, care & confidence.</p>
+      <p class="tag lang-fr">Cheveux naturels — clarté, soin & confiance.</p>
+
+      <p class="sub lang-en">
+        Tools, routines and curated picks for women with curly, coily & textured hair.
+      </p>
+      <p class="sub lang-fr">
+        Outils, routines et sélections pour les femmes aux cheveux bouclés, frisés et texturés.
+      </p>
+
+      <div class="switch" aria-label="Language switch">
+        <button type="button" data-lang="en" class="active">English</button>
+        <button type="button" data-lang="fr">Français</button>
+      </div>
+
+      <div class="gallery" aria-label="Natural hair gallery">
+        <img src="woman_icon_0.png" alt="Woman with curly hair" />
+        <img src="woman_icon_1.png" alt="Woman with braided hair" />
+        <img src="woman_icon_2.png" alt="Woman with afro hair" />
+        <img src="woman_icon_3.png" alt="Woman with long curls" />
+      </div>
     </header>
-    <main class="container">
-        <!-- Language switcher buttons -->
-        <div class="lang-switch">
-            <button type="button" data-lang="en" class="active">English</button>
-            <button type="button" data-lang="fr">Français</button>
+
+    <main>
+      <!-- EN -->
+      <section class="lang-en" aria-label="English links">
+        <a class="card hero" href="https://decodehair.schicgirl.me/" target="_blank" rel="noopener">
+          <span class="badge">BEST SELLER</span>
+          <div class="icon"><img src="icon_calendar_crop.png" alt="" /></div>
+          <div>
+            <h4>Why Is My Hair Dry?</h4>
+            <p>Stop guessing. Diagnose the real reason in 60 seconds.</p>
+          </div>
+        </a>
+
+        <div class="hero-note">
+          <strong>Premium mini-tool</strong> — quick clarity, personalized result.
         </div>
 
-        <!-- Gallery of natural hair icons (shown in both languages) -->
-        <div class="gallery">
-            <img src="woman_icon_0.png" alt="Icon of woman with curly hair" />
-            <img src="woman_icon_1.png" alt="Icon of woman with braided hair" />
-            <img src="woman_icon_2.png" alt="Icon of woman with afro hair" />
-            <img src="woman_icon_3.png" alt="Icon of woman with long curls" />
-        </div>
-        <!-- English content -->
-        <div class="lang-en">
-             <!-- Freebie Link -->
-            <a class="card" href="https://selar.com/1t7713181a" target="_blank" rel="noopener">
-                <img src="icon_book_crop.png" alt="book icon" />
-                <div>
-                    <p class="card-title">Your gift: 15 Hair Mistakes to Fix</p>
-                    <p class="card-desc">Want healthier, softer, and longer curly hair? Download your free ebook today!</p>
-                </div>
-            </a>
-            <!-- Shop Link -->
-            <a class="card" href="https://decodehair.schicgirl.me/" target="_blank" rel="noopener">
-                <img src="icon_calendar_crop.png" alt="calendar icon" />
-                <div>
-                    <p class="card-title">Why Is My Hair Dry?</p>
-                    <p class="card-desc">Stop guessing. Diagnose the real reason in 60 seconds.</p>
-                </div>
-            </a>
-            <!-- Amazon Picks Link -->
-            <a class="card" href="https://www.amazon.com/shop/schicgirl" target="_blank" rel="noopener">
-                <img src="icon_amazon_clear.png" alt="Amazon picks icon" />
-                <div>
-                    <p class="card-title">My Amazon Picks</p>
-                    <p class="card-desc">My recommendations and carefully curated affiliate links</p>
-                </div>
-            </a>
-            <!-- Facebook Link -->
-            <a class="card" href="https://www.facebook.com/schicgirl" target="_blank" rel="noopener">
-                <img src="icon_facebook_clear.png" alt="Facebook icon" />
-                <div>
-                    <p class="card-title">Facebook</p>
-                    <p class="card-desc">Follow me for updates and behind‑the‑scenes news</p>
-                </div>
-            </a>
-            <!-- Email Link -->
-            <a class="card" href="mailto:contacte.schicgirl@gmail.com" target="_self">
-                <img src="icon_email_clear.png" alt="Email icon" />
-                <div>
-                    <p class="card-title">Email</p>
-                    <p class="card-desc">Write to me for any questions or collaboration opportunities</p>
-                </div>
-            </a>
+        <a class="card" href="https://selar.com/1t7713181a" target="_blank" rel="noopener">
+          <div class="icon"><img src="icon_book_crop.png" alt="" /></div>
+          <div>
+            <h4>Your gift: 15 Hair Mistakes to Fix</h4>
+            <p>Download your free ebook and start improving your routine today.</p>
+          </div>
+        </a>
 
-            <!-- Reviews Section (English) -->
-            <div class="reviews">
-                <h3>Reviews</h3>
-                <div class="review">
-                    <p>"This routine transformed my curls! I finally have soft, hydrated hair."</p>
-                    <p class="stars">★★★★★</p>
-                    <p class="author">– Sophie C.</p>
-                </div>
-                <div class="review">
-                    <p>"I love the personalised advice. My hair has never looked better."</p>
-                    <p class="stars">★★★★★</p>
-                    <p class="author">– Miriam L.</p>
-                </div>
-                <div class="review">
-                    <p>"These tools are a game‑changer. My natural hair is thriving!"</p>
-                    <p class="stars">★★★★★</p>
-                    <p class="author">– Anita P.</p>
-                </div>
-            </div>
-        </div>
-        <!-- French content -->
-        <div class="lang-fr">
-             <!-- Freebie Link -->
-            <a class="card" href="https://selar.com/1t7713181a" target="_blank" rel="noopener">
-                <img src="icon_book_crop.png" alt="book icon" />
-                <div>
-                    <p class="card-title">Ton cadeau: 15 Erreurs capillaires à corriger</p>
-                    <p class="card-desc">Tu veux des cheveux crépus plus sains, doux et longs ? Télécharge ton ebook gratuitement aujourd'hui!</p>
-                </div>
-            </a>
-            <!-- Boutique Link -->
-           <a class="card" href="https://decodehair.schicgirl.me/" target="_blank" rel="noopener">
-                <img src="icon_calendar_crop.png" alt="calendar icon" />
-                <div>
-                    <p class="card-title">Pourquoi Mes Cheveux Sont Secs?</p>
-                    <p class="card-desc">Arrête de deviner. Diagnostique la vraie cause en 60 secondes.</p>
-                </div>
-            </a>
-            <!-- Amazon Picks Link (FR) -->
-            <a class="card" href="https://www.amazon.com/shop/schicgirl" target="_blank" rel="noopener">
-                <img src="icon_amazon_clear.png" alt="Icône Amazon" />
-                <div>
-                    <p class="card-title">Mes coups de cœur Amazon</p>
-                    <p class="card-desc">Mes recommandations et liens affiliés soigneusement sélectionnés</p>
-                </div>
-            </a>
-            <!-- Facebook Link (FR) -->
-            <a class="card" href="https://www.facebook.com/schicgirl" target="_blank" rel="noopener">
-                <img src="icon_facebook_clear.png" alt="Icône Facebook" />
-                <div>
-                    <p class="card-title">Facebook</p>
-                    <p class="card-desc">Suivez‑moi pour des mises à jour et des coulisses</p>
-                </div>
-            </a>
-            <!-- Email Link (FR) -->
-            <a class="card" href="mailto:contacte.schicgirl@gmail.com" target="_self">
-                <img src="icon_email_clear.png" alt="Icône email" />
-                <div>
-                    <p class="card-title">Contact</p>
-                    <p class="card-desc">Écrivez‑moi pour toute question ou collaboration</p>
-                </div>
-            </a>
+        <a class="card" href="https://www.facebook.com/schicgirl" target="_blank" rel="noopener">
+          <div class="icon"><img src="icon_facebook_clear.png" alt="" /></div>
+          <div>
+            <h4>Facebook</h4>
+            <p>Daily tips, behind-the-scenes, and real hair talk.</p>
+          </div>
+        </a>
 
-            <!-- Section Avis (French Reviews) -->
-            <div class="reviews">
-                <h3>Avis</h3>
-                <div class="review">
-                    <p>« Cette routine a transformé mes boucles ! Mes cheveux sont doux et hydratés. »</p>
-                    <p class="stars">★★★★★</p>
-                    <p class="author">– Sophie C.</p>
-                </div>
-                <div class="review">
-                    <p>« J’adore les conseils personnalisés. Mes cheveux n’ont jamais été aussi beaux. »</p>
-                    <p class="stars">★★★★★</p>
-                    <p class="author">– Miriam L.</p>
-                </div>
-                <div class="review">
-                    <p>« Les outils sont révolutionnaires. Mes cheveux naturels s’épanouissent ! »</p>
-                    <p class="stars">★★★★★</p>
-                    <p class="author">– Anita P.</p>
-                </div>
-            </div>
+        <a class="card" href="mailto:contacte.schicgirl@gmail.com">
+          <div class="icon"><img src="icon_email_clear.png" alt="" /></div>
+          <div>
+            <h4>Email</h4>
+            <p>Collaborations, questions, or support — write to me.</p>
+          </div>
+        </a>
+
+        <a class="card" href="https://www.amazon.com/shop/schicgirl" target="_blank" rel="noopener">
+          <div class="icon"><img src="icon_amazon_clear.png" alt="" /></div>
+          <div>
+            <h4>My Amazon Picks</h4>
+            <p>Carefully curated affiliate recommendations I actually trust.</p>
+          </div>
+        </a>
+
+        <h3 class="section-title">Real Results From Women Like You</h3>
+        <div class="reviews">
+          <div class="review">
+            <div>“This routine transformed my curls! I finally have soft, hydrated hair.”</div>
+            <div class="stars">★★★★★</div>
+            <div class="who">— Sophie C.</div>
+          </div>
+          <div class="review">
+            <div>“I love the personalised advice. My hair has never looked better.”</div>
+            <div class="stars">★★★★★</div>
+            <div class="who">— Miriam L.</div>
+          </div>
+          <div class="review">
+            <div>“These tools are a game-changer. My natural hair is thriving!”</div>
+            <div class="stars">★★★★★</div>
+            <div class="who">— Anita P.</div>
+          </div>
         </div>
+      </section>
+
+      <!-- FR -->
+      <section class="lang-fr" aria-label="Liens français">
+        <a class="card hero" href="https://decodehair.schicgirl.me/" target="_blank" rel="noopener">
+          <span class="badge">TOP VENTE</span>
+          <div class="icon"><img src="icon_calendar_crop.png" alt="" /></div>
+          <div>
+            <h4>Pourquoi mes cheveux sont secs ?</h4>
+            <p>Arrête de deviner. Diagnostique la vraie cause en 60 secondes.</p>
+          </div>
+        </a>
+
+        <div class="hero-note">
+          <strong>Mini-outil premium</strong> — résultat personnalisé, en quelques secondes.
+        </div>
+
+        <a class="card" href="https://selar.com/1t7713181a" target="_blank" rel="noopener">
+          <div class="icon"><img src="icon_book_crop.png" alt="" /></div>
+          <div>
+            <h4>Ton cadeau : 15 erreurs capillaires à corriger</h4>
+            <p>Télécharge ton ebook gratuit et améliore ta routine dès aujourd’hui.</p>
+          </div>
+        </a>
+
+        <a class="card" href="https://www.facebook.com/schicgirl" target="_blank" rel="noopener">
+          <div class="icon"><img src="icon_facebook_clear.png" alt="" /></div>
+          <div>
+            <h4>Facebook</h4>
+            <p>Conseils quotidiens, coulisses, et vrai contenu cheveux.</p>
+          </div>
+        </a>
+
+        <a class="card" href="mailto:contacte.schicgirl@gmail.com">
+          <div class="icon"><img src="icon_email_clear.png" alt="" /></div>
+          <div>
+            <h4>Contact</h4>
+            <p>Questions, collaborations ou support — écris-moi.</p>
+          </div>
+        </a>
+
+        <a class="card" href="https://www.amazon.com/shop/schicgirl" target="_blank" rel="noopener">
+          <div class="icon"><img src="icon_amazon_clear.png" alt="" /></div>
+          <div>
+            <h4>Mes coups de cœur Amazon</h4>
+            <p>Mes recommandations (liens affiliés) soigneusement sélectionnées.</p>
+          </div>
+        </a>
+
+        <h3 class="section-title">Résultats réels — femmes comme toi</h3>
+        <div class="reviews">
+          <div class="review">
+            <div>« Cette routine a transformé mes boucles ! Cheveux doux et hydratés. »</div>
+            <div class="stars">★★★★★</div>
+            <div class="who">— Sophie C.</div>
+          </div>
+          <div class="review">
+            <div>« J’adore les conseils personnalisés. Mes cheveux n’ont jamais été aussi beaux. »</div>
+            <div class="stars">★★★★★</div>
+            <div class="who">— Miriam L.</div>
+          </div>
+          <div class="review">
+            <div>« Outils révolutionnaires. Mes cheveux naturels s’épanouissent ! »</div>
+            <div class="stars">★★★★★</div>
+            <div class="who">— Anita P.</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="banner" aria-label="Bottom banner">
+        <img src="beautiful-woman.jpg" alt="Natural hair inspiration" />
+      </div>
+
+      <footer>
+        <div class="lang-en">As an Amazon Associate I earn from qualifying purchases.</div>
+        <div class="lang-fr">En tant qu’associée Amazon, je gagne des revenus grâce aux achats éligibles.</div>
+        <div class="lang-en">© 2026 Schicgirl. All rights reserved.</div>
+        <div class="lang-fr">© 2026 Schicgirl. Tous droits réservés.</div>
+      </footer>
     </main>
-    <!-- Bottom banner image -->
-    <div class="bottom-banner">
-        <!-- Replace 'icon_book_crop.png' with your desired image file for the bottom picture -->
-        <img src="beautiful-woman.jpg" alt="Inspiring natural hair photo" />
-    </div>
+  </div>
 
-    <footer>
-        <p class="lang-en">As an Amazon Associate I earn from qualifying purchases.</p>
-        <p class="lang-fr">En tant qu’associée Amazon, je gagne des revenus grâce aux achats éligibles.</p>
-        <!-- Copyright and credit notice -->
-        <p class="lang-en">© 2026 Schicgirl. All rights reserved. Design and content by Schicgirl.</p>
-        <p class="lang-fr">© 2026 Schicgirl. Tous droits réservés. Design et contenu par Schicgirl.</p>
-    </footer>
-
-    <!-- Modal removed as free eBook is no longer offered -->
-    <!-- Language toggle script -->
-    <script>
-    (function() {
-        const body = document.body;
-        const buttons = document.querySelectorAll('.lang-switch button');
-        buttons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const lang = btn.getAttribute('data-lang');
-                body.setAttribute('data-lang', lang);
-                buttons.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-            });
+  <script>
+    (function () {
+      const body = document.body;
+      const buttons = document.querySelectorAll(".switch button");
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const lang = btn.getAttribute("data-lang");
+          body.setAttribute("data-lang", lang);
+          buttons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
         });
-
-        /* The free eBook modal and contact capture have been removed.
-           If needed in the future, this is where modal logic would be implemented. */
+      });
     })();
-    </script>
+  </script>
 </body>
 </html>
