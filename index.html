@@ -381,6 +381,8 @@
 
     /* Make the first card a hero (stronger) */
     .card.hero{
+      position: relative;
+      padding-right: 120px; /* space reserved for badge */
       border: 1px solid rgba(245,215,166,.75);
       box-shadow: 0 18px 40px rgba(19,12,7,.14), 0 0 32px rgba(245,215,166,.18);
     }
@@ -388,9 +390,11 @@
       position:absolute;
       top: 12px;
       right: 12px;
-      font-size: .72rem;
+      font-size: .70rem;
       padding: 6px 10px;
       border-radius: 999px;
+      white-space: nowrap;
+      z-index: 3;
       background: linear-gradient(135deg, rgba(185,132,74,.95), rgba(245,215,166,.92));
       color: #2a1608;
       border: 1px solid rgba(255,255,255,.55);
@@ -494,6 +498,17 @@
       body:after, .logo, .card, .card:hover:after { animation:none !important; }
       .card, .gallery img, .switch button { transition:none !important; }
     }
+
+    /* On small screens: smaller badge + more space */
+@media (max-width: 420px){
+  .card.hero{ padding-right: 105px; }
+  .badge{
+    top: 10px;
+    right: 10px;
+    font-size: .66rem;
+    padding: 5px 9px;
+  }
+}
   </style>
 </head>
 
